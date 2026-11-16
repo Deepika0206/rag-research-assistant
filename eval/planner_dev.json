@@ -1,0 +1,50 @@
+[
+  {
+    "question": "What is the time complexity of binary search?",
+    "expected": "single_hop"
+  },
+  {
+    "question": "What is memoization?",
+    "expected": "single_hop"
+  },
+  {
+    "question": "How does Lomuto partitioning work in quicksort?",
+    "expected": "single_hop"
+  },
+  {
+    "question": "What is the balance factor constraint in an AVL tree?",
+    "expected": "single_hop"
+  },
+  {
+    "question": "How does Dijkstra find shortest paths in weighted graphs?",
+    "expected": "single_hop"
+  },
+  {
+    "question": "Compare sliding window and two-pointer techniques across my notes.",
+    "expected": "multi_hop"
+  },
+  {
+    "question": "How do Dijkstra's algorithm and BFS differ for shortest paths?",
+    "expected": "multi_hop"
+  },
+  {
+    "question": "Which topics in my notes use both recursion and dynamic programming?",
+    "expected": "multi_hop"
+  },
+  {
+    "question": "Contrast QuickSort partitioning with MergeSort divide-and-conquer.",
+    "expected": "multi_hop"
+  },
+  {
+    "question": "Relate binary search trees and self-balancing AVL tree rotations.",
+    "expected": "multi_hop"
+  },
+  {
+    "question": "Who won the 2018 FIFA World Cup?",
+    "expected": "single_hop"
+  },
+  {
+    "question": "What is the capital of Australia?",
+    "expected": "single_hop"
+  }
+]

@@ -1,0 +1,44 @@
+services:
+  - type: web
+    name: rag-assistant-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: standard
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: rag-db
+          property: connectionString
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: CLAUDE_MODEL
+        value: claude-sonnet-5-5
+      - key: ACCESS_CODE
+        generateValue: true
+      - key: ENABLE_DOCS
+        value: "0"
+      - key: ALLOWED_ORIGINS
+        value: https://rag-assistant-web.onrender.com
+      - key: USE_LLM_CACHE
+        value: "0"
+
+  - type: web
+    name: rag-assistant-web
+    runtime: static
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./dist
+    plan: free
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: VITE_API_URL
+        value: https://rag-assistant-api.onrender.com
+
+databases:
+  - name: rag-db
+    databaseName: rag
+    user: rag
+    plan: basic-256mb
+    postgresMajorVersion: "16"

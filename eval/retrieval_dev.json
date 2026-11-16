@@ -1,0 +1,116 @@
+[
+  {
+    "id": "dev01",
+    "question": "What is the time complexity of binary search?",
+    "gold": [
+      {
+        "doc": "searching/binary_search.md",
+        "phrase": "strictly logarithmic O(log n)"
+      }
+    ]
+  },
+  {
+    "id": "dev02",
+    "question": "How does two pointers avoid quadratic nested loops?",
+    "gold": [
+      {
+        "doc": "searching/two_pointers.md",
+        "phrase": "evaluate conditions without quadratic nested loops"
+      }
+    ]
+  },
+  {
+    "id": "dev03",
+    "question": "What are the partitioning schemes in quicksort?",
+    "gold": [
+      {
+        "doc": "sorting/quicksort.md",
+        "phrase": "lomuto partitioning maintains a boundary pointer"
+      }
+    ]
+  },
+  {
+    "id": "dev04",
+    "question": "Why is merge sort considered a stable sorting algorithm?",
+    "gold": [
+      {
+        "doc": "sorting/mergesort.md",
+        "phrase": "preserving the original relative order of equivalent items"
+      }
+    ]
+  },
+  {
+    "id": "dev05",
+    "question": "Why does Dijkstra algorithm fail on graphs with negative weights?",
+    "gold": [
+      {
+        "doc": "graphs/dijkstra.md",
+        "phrase": "fails on graphs with negative edges"
+      }
+    ]
+  },
+  {
+    "id": "dev06",
+    "question": "How does breadth-first search find unweighted shortest paths?",
+    "gold": [
+      {
+        "doc": "graphs/bfs_dfs.md",
+        "phrase": "computes the exact shortest path in unweighted graphs"
+      }
+    ]
+  },
+  {
+    "id": "dev07",
+    "question": "How can 0/1 knapsack space be optimized to a 1D array?",
+    "gold": [
+      {
+        "doc": "dp/knapsack.md",
+        "phrase": "iterating backwards from capacity W down to wt"
+      }
+    ]
+  },
+  {
+    "id": "dev08",
+    "question": "How does memoization improve recursive dynamic programming?",
+    "gold": [
+      {
+        "doc": "dp/longest_common_subsequence.md",
+        "phrase": "memoization is an optimization technique that speeds up"
+      }
+    ]
+  },
+  {
+    "id": "dev09",
+    "question": "What property does an inorder traversal of a binary search tree have?",
+    "gold": [
+      {
+        "doc": "trees/binary_search_tree.md",
+        "phrase": "outputs elements in monotonically increasing sorted order"
+      }
+    ]
+  },
+  {
+    "id": "dev10",
+    "question": "What is the balance factor constraint in an AVL tree?",
+    "gold": [
+      {
+        "doc": "trees/avl_trees.md",
+        "phrase": "balance factor of every node stays within"
+      }
+    ]
+  },
+  {
+    "id": "dev11",
+    "question": "Compare the logarithmic guarantees between binary search and self-balancing AVL trees.",
+    "gold": [
+      {
+        "doc": "searching/binary_search.md",
+        "phrase": "strictly logarithmic O(log n)"
+      },
+      {
+        "doc": "trees/avl_trees.md",
+        "phrase": "maintains logarithmic lookup depth under insertions"
+      }
+    ]
+  }
+]

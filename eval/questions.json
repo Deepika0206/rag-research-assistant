@@ -1,0 +1,314 @@
+[
+  {
+    "id": "s01",
+    "category": "single_hop",
+    "question": "What is the auxiliary space complexity of iterative binary search?",
+    "gold": [
+      {
+        "doc": "searching/binary_search.md",
+        "phrase": "iterative approach uses O(1) auxiliary space"
+      }
+    ],
+    "gold_answer": "Iterative binary search uses O(1) auxiliary space, making it optimal for indexed array lookups."
+  },
+  {
+    "id": "s02",
+    "category": "single_hop",
+    "question": "How does binary search generalize beyond exact key lookups?",
+    "gold": [
+      {
+        "doc": "searching/binary_search.md",
+        "phrase": "generalizes to monotonic predicate functions"
+      }
+    ],
+    "gold_answer": "Binary search generalizes to monotonic predicate functions, such as locating the boundary where condition P becomes true."
+  },
+  {
+    "id": "s03",
+    "category": "single_hop",
+    "question": "How does the inward converging two pointers technique evaluate target sums?",
+    "gold": [
+      {
+        "doc": "searching/two_pointers.md",
+        "phrase": "opposing pointers begin at index zero and the tail index"
+      }
+    ],
+    "gold_answer": "Opposing pointers start at index zero and the tail index. If the sum is smaller than the target, incrementing the left pointer increases the total; if larger, decrementing the right pointer decreases it."
+  },
+  {
+    "id": "s04",
+    "category": "single_hop",
+    "question": "What advantage does Hoare partitioning offer over Lomuto partitioning?",
+    "gold": [
+      {
+        "doc": "sorting/quicksort.md",
+        "phrase": "executing fewer swaps and coping better with identical keys"
+      }
+    ],
+    "gold_answer": "Hoare partitioning executes fewer swaps on average and copes significantly better with collections containing duplicate keys."
+  },
+  {
+    "id": "s05",
+    "category": "single_hop",
+    "question": "How does dual-pivot partitioning improve quicksort performance?",
+    "gold": [
+      {
+        "doc": "sorting/quicksort.md",
+        "phrase": "partitioned into three segments, yielding fewer comparisons"
+      }
+    ],
+    "gold_answer": "By selecting two pivots, the array is partitioned into three segments, reducing total comparisons and improving CPU cache locality."
+  },
+  {
+    "id": "s06",
+    "category": "single_hop",
+    "question": "Why does the merge step in merge sort run in linear time?",
+    "gold": [
+      {
+        "doc": "sorting/mergesort.md",
+        "phrase": "each element is compared and placed once per tree level"
+      }
+    ],
+    "gold_answer": "The combine step compares and places each element once per recursion level, resulting in linear O(n) runtime for the merge pass."
+  },
+  {
+    "id": "s07",
+    "category": "single_hop",
+    "question": "How does Dijkstra algorithm perform edge relaxation?",
+    "gold": [
+      {
+        "doc": "graphs/dijkstra.md",
+        "phrase": "path through current node u provides a shorter distance"
+      }
+    ],
+    "gold_answer": "Relaxation checks if reaching neighbor v via vertex u yields a shorter total distance than previously recorded, updating the distance if smaller."
+  },
+  {
+    "id": "s08",
+    "category": "single_hop",
+    "question": "How can depth-first search detect cycles in directed graphs?",
+    "gold": [
+      {
+        "doc": "graphs/bfs_dfs.md",
+        "phrase": "edge pointing to an ancestor currently residing in the active recursion"
+      }
+    ],
+    "gold_answer": "A directed cycle is detected when DFS encounters a back-edge to an ancestor currently residing in the active recursion call stack."
+  },
+  {
+    "id": "s09",
+    "category": "single_hop",
+    "question": "Why can a greedy approach fail on the 0/1 knapsack problem?",
+    "gold": [
+      {
+        "doc": "dp/knapsack.md",
+        "phrase": "greedy selection of highest value-to-weight ratio can fail"
+      }
+    ],
+    "gold_answer": "Greedy selection of the highest value-to-weight ratio can fail on discrete items because items cannot be divided fractionally, leaving capacity wasted."
+  },
+  {
+    "id": "s10",
+    "category": "single_hop",
+    "question": "What is the time complexity of the naive recursive LCS approach?",
+    "gold": [
+      {
+        "doc": "dp/longest_common_subsequence.md",
+        "phrase": "naive recursion branches exponentially to O(2^(n+m))"
+      }
+    ],
+    "gold_answer": "Naive recursion without memoization branches exponentially to O(2^(n+m)) due to heavily overlapping subproblems."
+  },
+  {
+    "id": "s11",
+    "category": "single_hop",
+    "question": "Under what condition does an unbalanced binary search tree degenerate into linear depth?",
+    "gold": [
+      {
+        "doc": "trees/binary_search_tree.md",
+        "phrase": "inserted in ascending or descending sorted order without balancing"
+      }
+    ],
+    "gold_answer": "Inserting elements in strictly ascending or descending sorted order into an unbalancing BST degenerates the tree into a linear chain with O(n) depth."
+  },
+  {
+    "id": "s12",
+    "category": "single_hop",
+    "question": "Which tree rotations are used to resolve zig-zag imbalances in AVL trees?",
+    "gold": [
+      {
+        "doc": "trees/avl_trees.md",
+        "phrase": "Double rotations resolve zig-zag imbalances"
+      }
+    ],
+    "gold_answer": "Double rotations (Left-Right and Right-Left) resolve zig-zag imbalances in AVL trees."
+  },
+  {
+    "id": "m01",
+    "category": "multi_hop",
+    "question": "Compare the auxiliary memory requirements of merge sort and quicksort.",
+    "gold": [
+      {
+        "doc": "sorting/mergesort.md",
+        "phrase": "require O(n) auxiliary memory for combining"
+      },
+      {
+        "doc": "sorting/quicksort.md",
+        "phrase": "requires O(log n) auxiliary stack space and sorts in-place"
+      }
+    ],
+    "gold_answer": "Standard array merge sort requires O(n) auxiliary buffer memory for the combine step, whereas QuickSort operates in-place requiring only O(log n) auxiliary stack memory."
+  },
+  {
+    "id": "m02",
+    "category": "multi_hop",
+    "question": "Compare how binary search and binary search trees search for elements.",
+    "gold": [
+      {
+        "doc": "searching/binary_search.md",
+        "phrase": "compares the target with the middle element"
+      },
+      {
+        "doc": "trees/binary_search_tree.md",
+        "phrase": "moving to the left child if the target is smaller"
+      }
+    ],
+    "gold_answer": "Binary search computes a middle index on a sorted array and halves the range. A binary search tree traverses pointers from the root, moving left if the target is smaller and right if larger."
+  },
+  {
+    "id": "m03",
+    "category": "multi_hop",
+    "question": "How do edge weights differentiate when to use breadth-first search versus Dijkstra algorithm?",
+    "gold": [
+      {
+        "doc": "graphs/bfs_dfs.md",
+        "phrase": "computes the exact shortest path in unweighted graphs"
+      },
+      {
+        "doc": "graphs/dijkstra.md",
+        "phrase": "non-negative edge weights"
+      }
+    ],
+    "gold_answer": "BFS finds the shortest path in unweighted graphs where all edge costs are uniform. Dijkstra algorithm is required for graphs with non-negative variable edge weights using a priority queue."
+  },
+  {
+    "id": "m04",
+    "category": "multi_hop",
+    "question": "Compare the 2D tabular construction of 0/1 knapsack and longest common subsequence.",
+    "gold": [
+      {
+        "doc": "dp/knapsack.md",
+        "phrase": "representing the maximum value using a subset"
+      },
+      {
+        "doc": "dp/longest_common_subsequence.md",
+        "phrase": "2D matrix dp of size (n+1) by (m+1) is filled iteratively"
+      }
+    ],
+    "gold_answer": "Both algorithms build a 2D dynamic programming grid: 0/1 knapsack tracks items against capacity W, while LCS tracks prefixes of length n and m."
+  },
+  {
+    "id": "m05",
+    "category": "multi_hop",
+    "question": "Which topics in my notes discuss maintaining logarithmic O(log n) depth or runtime bounds?",
+    "gold": [
+      {
+        "doc": "searching/binary_search.md",
+        "phrase": "strictly logarithmic O(log n)"
+      },
+      {
+        "doc": "trees/avl_trees.md",
+        "phrase": "maintains logarithmic lookup depth under insertions"
+      }
+    ],
+    "gold_answer": "The searching notes cover logarithmic O(log n) time via binary search, and the trees notes cover logarithmic lookup depth via height-balanced AVL trees."
+  },
+  {
+    "id": "m06",
+    "category": "multi_hop",
+    "question": "Which topics in my notes document techniques using inward converging pointers from opposite ends?",
+    "gold": [
+      {
+        "doc": "searching/two_pointers.md",
+        "phrase": "opposing pointers begin at index zero and the tail index"
+      },
+      {
+        "doc": "sorting/quicksort.md",
+        "phrase": "Hoare partitioning uses two pointers scanning inward from both ends"
+      }
+    ],
+    "gold_answer": "The searching topic uses inward converging pointers from index zero and the tail index, and the sorting topic uses two pointers scanning inward from both ends in Hoare partitioning."
+  },
+  {
+    "id": "m07",
+    "category": "multi_hop",
+    "question": "How does dividing an array in half differ between binary search and merge sort?",
+    "gold": [
+      {
+        "doc": "searching/binary_search.md",
+        "phrase": "throws away half of the array"
+      },
+      {
+        "doc": "sorting/mergesort.md",
+        "phrase": "splits an array into halves, sorts them recursively"
+      }
+    ],
+    "gold_answer": "Binary search discards one half of the array after comparing the target with the middle element. Merge sort divides the array into halves and recursively processes both halves before combining."
+  },
+  {
+    "id": "m08",
+    "category": "multi_hop",
+    "question": "Compare tree rotations in AVL trees with linear degeneration in basic binary search trees.",
+    "gold": [
+      {
+        "doc": "trees/avl_trees.md",
+        "phrase": "rotations restore balance in O(1) time per affected node"
+      },
+      {
+        "doc": "trees/binary_search_tree.md",
+        "phrase": "degenerates into a linear chain with O(n) worst-case depth"
+      }
+    ],
+    "gold_answer": "Unbalanced binary search trees degenerate into an O(n) linear chain when keys arrive in sorted order. AVL trees counter this by applying O(1) tree rotations whenever a node's balance factor exceeds plus or minus one."
+  },
+  {
+    "id": "u01",
+    "category": "unsupported",
+    "question": "Explain how the Aho-Corasick algorithm builds failure links for multi-pattern searching.",
+    "gold": [],
+    "gold_answer": "The notes cannot answer this. They do not cover the Aho-Corasick algorithm or multi-pattern keyword trees.",
+    "must_be_absent": ["aho", "corasick"]
+  },
+  {
+    "id": "u02",
+    "category": "unsupported",
+    "question": "How does Tarjan algorithm find strongly connected components using low-link values?",
+    "gold": [],
+    "gold_answer": "The notes cannot answer this. They do not cover Tarjan's low-link algorithm for strongly connected components.",
+    "must_be_absent": ["tarjan", "low-link"]
+  },
+  {
+    "id": "u03",
+    "category": "unsupported",
+    "question": "How do red-black trees maintain balance using black-height invariants and node coloring?",
+    "gold": [],
+    "gold_answer": "The notes cannot answer this. The corpus covers AVL trees and basic BSTs, but does not cover red-black trees or black-height properties.",
+    "must_be_absent": ["red-black", "black-height"]
+  },
+  {
+    "id": "u04",
+    "category": "unsupported",
+    "question": "How does Kruskal's algorithm use a disjoint-set data structure to find a minimum spanning tree?",
+    "gold": [],
+    "gold_answer": "The notes cannot answer this. The corpus covers graph traversals and Dijkstra's algorithm, but does not cover Kruskal's algorithm or minimum spanning trees.",
+    "must_be_absent": ["kruskal", "spanning tree"]
+  },
+  {
+    "id": "u05",
+    "category": "unsupported",
+    "question": "Who was the Apollo 11 astronaut who first set foot on the Moon in July 1969?",
+    "gold": [],
+    "gold_answer": "The notes cannot answer this. The corpus contains private computer science study notes, not space exploration history.",
+    "must_be_absent": ["apollo", "moon", "astronaut"]
+  }
+]

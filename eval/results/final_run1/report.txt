@@ -1,0 +1,37 @@
+Run: final_run1 | model: claude-sonnet-5-5 | corpus: 22f4fc90c8ff1fa1 | commit: uncommitted
+
+MAIN TABLE (per question category)
+category    system      n  Recall@5    MRR  Correct  Faithful  CiteAcc  Reject  claims  cites
+single_hop  baseline   12      1.00   0.85     4.92       92%     100%     n/a     161     76
+single_hop  agentic    12      1.00   0.88     4.83       95%     100%     n/a      61     39
+multi_hop   baseline    8      0.75   0.88     4.00       88%     100%     n/a     146     87
+multi_hop   agentic     8      0.88   0.81     4.25       93%     100%     n/a     100     50
+unsupported baseline    5       n/a    n/a     5.00       61%     100%    100%      75     23
+unsupported agentic     5       n/a    n/a     5.00       56%      n/a    100%       9      0
+
+PAIRED CORRECTNESS (proposed vs baseline, number of questions)
+single_hop   wins 0 | ties 11 | losses 1
+multi_hop    wins 2 | ties 3 | losses 3
+unsupported  wins 0 | ties 5 | losses 0
+
+UNSUPPORTED: automatic cross-check (agentic status == evidence_insufficient)
+5/5 strict automatic rejections. Manual (abstained) agentic: 5/5
+
+RETRIEVAL ABLATION (single-hop and multi-hop only)
+category    variant                         Recall@5    MRR  avg chunks seen
+single_hop  dense top-5                         1.00   0.85              5.0
+single_hop  hybrid + rerank, 1 query            1.00   0.88              5.0
+single_hop  decomposition (per sub-question)      1.00   0.88              5.4
+multi_hop   dense top-5                         0.75   0.88              5.0
+multi_hop   hybrid + rerank, 1 query            0.88   0.81              5.0
+multi_hop   decomposition (per sub-question)      1.00   1.00             10.0
+
+CRITIC ACTIVITY (agentic, from the trace)
+category     critic checks  failed  claims rejected  sub-q refined  sub-q insufficient
+single_hop              17       6                0              2                   2
+multi_hop               27      15                0              6                   4
+unsupported             15      15                0              5                   5
+
+COST AND SPEED (all 25 questions; the cache was OFF)
+baseline   median latency    4.8 s | mean LLM calls   1.0 | mean tokens in/out   2299/  546 | mean cost 0.0151 | total cost 0.377
+agentic    median latency   12.6 s | mean LLM calls   6.8 | mean tokens in/out  12230/ 1439 | mean cost 0.0583 | total cost 1.457

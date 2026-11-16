@@ -1,0 +1,32 @@
+{
+  "model": "claude-sonnet-5-5",
+  "corpus_fingerprint": "22f4fc90c8ff1fa1",
+  "n_chunks": 87,
+  "prompts": {
+    "baseline": "639779348c57",
+    "planner": "f1be1ccbba7c",
+    "drafter": "f12479a235e8",
+    "critic": "add1fdb08985",
+    "refiner": "cbf8a1fc63d4",
+    "synthesizer": "c07655796d2b"
+  },
+  "settings": {
+    "MAX_TOKENS": 320,
+    "OVERLAP_TOKENS": 50,
+    "CANDIDATES": 10,
+    "TOP_K": 5,
+    "MAX_REFINEMENTS": 2
+  },
+  "cache": false,
+  "git": {
+    "commit": "uncommitted",
+    "uncommitted_changes": false
+  },
+  "packages": {
+    "langgraph": "1.2.21",
+    "anthropic": "2.8.0",
+    "sentence-transformers": "3.4.1",
+    "rank-bm25": "0.2.2"
+  },
+  "started": "2026-11-15 23:49:46"
+}

@@ -1,0 +1,16 @@
+# Pinned tested dependency lock for reproducible deployment & evaluation
+anthropic==2.8.0
+fastapi==0.115.6
+httpx==0.28.1
+langgraph==1.2.0
+langgraph-checkpoint==3.0.0
+numpy==1.26.4
+pgvector==0.3.6
+psycopg==3.2.3
+psycopg-binary==3.2.3
+python-dotenv==1.0.1
+rank-bm25==0.2.2
+sentence-transformers==3.3.1
+torch==2.4.1
+transformers==4.47.0
+uvicorn==0.34.0

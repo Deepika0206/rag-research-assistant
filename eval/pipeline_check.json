@@ -1,0 +1,38 @@
+[
+  {
+    "id": "p01",
+    "category": "single_hop",
+    "question": "How does an AVL tree restore balance when a node balance factor reaches plus two?",
+    "gold": [
+      {
+        "doc": "trees/avl_trees.md",
+        "phrase": "rotations restore balance in O(1) time"
+      }
+    ],
+    "gold_answer": "When an insertion pushes any node balance factor to plus or minus two, tree rotations restore balance in O(1) time per affected node."
+  },
+  {
+    "id": "p02",
+    "category": "multi_hop",
+    "question": "Compare the stability properties between QuickSort and MergeSort across my notes.",
+    "gold": [
+      {
+        "doc": "sorting/quicksort.md",
+        "phrase": "sorts in-place"
+      },
+      {
+        "doc": "sorting/mergesort.md",
+        "phrase": "preserving the original relative order of equivalent items"
+      }
+    ],
+    "gold_answer": "Merge sort is stable and preserves the original relative order of equivalent items, whereas QuickSort sorts in-place but does not guarantee stability."
+  },
+  {
+    "id": "p03",
+    "category": "unsupported",
+    "question": "How does Prim algorithm compute a minimum spanning tree using an adjacency matrix?",
+    "gold": [],
+    "gold_answer": "The notes cannot answer this. They do not cover Prim's minimum spanning tree algorithm.",
+    "must_be_absent": ["prim", "spanning tree"]
+  }
+]
