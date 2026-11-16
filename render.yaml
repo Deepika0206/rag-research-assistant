@@ -20,21 +20,9 @@ services:
       - key: ENABLE_DOCS
         value: "0"
       - key: ALLOWED_ORIGINS
-        value: https://rag-assistant-web.onrender.com
+        value: "*"
       - key: USE_LLM_CACHE
         value: "0"
-
-  - type: web
-    name: rag-assistant-web
-    runtime: static
-    buildCommand: npm ci && npm run build
-    staticPublishPath: ./dist
-    plan: free
-    envVars:
-      - key: NODE_VERSION
-        value: "22"
-      - key: VITE_API_URL
-        value: https://rag-assistant-api.onrender.com
 
 databases:
   - name: rag-db
